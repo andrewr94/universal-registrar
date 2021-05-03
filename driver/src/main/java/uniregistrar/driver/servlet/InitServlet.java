@@ -5,16 +5,17 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
+import org.apache.logging.log4j.Logger;
 import uniregistrar.driver.Driver;
+
 
 public class InitServlet extends HttpServlet implements Servlet {
 
 	private static final long serialVersionUID = 3361232622582494024L;
 
-	private static Logger log = LoggerFactory.getLogger(InitServlet.class);
+	private static Logger log = LogManager.getLogger(InitServlet.class);
 
 	private static Driver driver = null;
 

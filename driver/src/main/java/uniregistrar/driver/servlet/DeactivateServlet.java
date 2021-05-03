@@ -1,23 +1,21 @@
 package uniregistrar.driver.servlet;
 
-import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import uniregistrar.request.DeactivateRequest;
+import uniregistrar.state.DeactivateState;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import uniregistrar.request.DeactivateRequest;
-import uniregistrar.state.DeactivateState;
+import java.io.IOException;
 
 public class DeactivateServlet extends AbstractServlet implements Servlet {
 
 	private static final long serialVersionUID = 8532462131637520098L;
 
-	private static Logger log = LoggerFactory.getLogger(DeactivateServlet.class);
+	private static Logger log = LogManager.getLogger(DeactivateServlet.class);
 
 	public DeactivateServlet() {
 

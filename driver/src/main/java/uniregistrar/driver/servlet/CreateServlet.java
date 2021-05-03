@@ -7,9 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import uniregistrar.request.CreateRequest;
 import uniregistrar.state.CreateState;
 
@@ -17,7 +17,7 @@ public class CreateServlet extends AbstractServlet implements Servlet {
 
 	private static final long serialVersionUID = 7431292074564723539L;
 
-	private static Logger log = LoggerFactory.getLogger(CreateServlet.class);
+	private static Logger log = LogManager.getLogger(CreateServlet.class);
 
 	public CreateServlet() {
 
